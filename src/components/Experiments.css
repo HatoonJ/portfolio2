@@ -1,0 +1,134 @@
+.experiments {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.experiments__head-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 48px;
+}
+
+.experiments__controls {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.experiments__controls button {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text);
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s var(--ease), border-color 0.3s var(--ease);
+}
+
+.experiments__controls button:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent-line);
+}
+
+.experiments__track {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  padding: 4px 32px 16px;
+  scrollbar-width: none;
+}
+
+.experiments__track::-webkit-scrollbar {
+  display: none;
+}
+
+.experiments__spacer {
+  flex: 0 0 8px;
+}
+
+.exp-card {
+  flex: 0 0 320px;
+  scroll-snap-align: start;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  overflow: hidden;
+  transition: transform 0.4s var(--ease), border-color 0.4s var(--ease);
+}
+
+.exp-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-strong);
+}
+
+.exp-card__image {
+  position: relative;
+  width: 100%;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  background: var(--bg-elevated-2);
+}
+
+.exp-card__image img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.5s var(--ease);
+}
+
+.exp-card__image:hover img {
+  transform: scale(1.06);
+}
+
+.exp-card__tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 5px 12px;
+  border-radius: 100px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: rgba(8, 8, 10, 0.7);
+  backdrop-filter: blur(6px);
+  border: 1px solid var(--border-strong);
+}
+
+.exp-card__body {
+  padding: 20px;
+}
+
+.exp-card__body h3 {
+  font-size: 15.5px;
+  margin-bottom: 8px;
+}
+
+.exp-card__body p {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+.exp-card__link {
+  display: inline-block;
+  margin-top: 10px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--accent-bright);
+}
+
+@media (max-width: 640px) {
+  .experiments__head-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .exp-card {
+    flex-basis: 78vw;
+  }
+}

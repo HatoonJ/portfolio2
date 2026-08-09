@@ -1,0 +1,55 @@
+.contact__card {
+  position: relative;
+  text-align: center;
+  padding: 90px 40px;
+  border-radius: 28px;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  overflow: hidden;
+}
+
+.contact__glow {
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 260px;
+  background: radial-gradient(ellipse, var(--accent-soft) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.contact__card .eyebrow {
+  justify-content: center;
+}
+
+.contact__heading {
+  position: relative;
+  font-size: clamp(30px, 4.5vw, 52px);
+  line-height: 1.12;
+  max-width: 720px;
+  margin: 0 auto 20px;
+}
+
+.contact__detail {
+  position: relative;
+  color: var(--text-muted);
+  font-size: 16.5px;
+  max-width: 480px;
+  margin: 0 auto 44px;
+  line-height: 1.6;
+}
+
+.contact__actions {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+@media (max-width: 640px) {
+  .contact__card {
+    padding: 56px 24px;
+  }
+}

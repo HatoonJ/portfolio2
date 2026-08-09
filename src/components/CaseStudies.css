@@ -1,0 +1,8 @@
+.case-studies {
+  background: linear-gradient(180deg, transparent 0%, rgba(110, 91, 255, 0.03) 50%, transparent 100%);
+}
+
+.case-studies__list {
+  display: flex;
+  flex-direction: column;
+}
