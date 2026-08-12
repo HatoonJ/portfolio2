@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import portrait from "../assets/portrait/hatoon.webp";
+import portrait from "../assets/portrait/hatoon3.png"; //"../assets/portrait/hatoon.webp";
 import { hero, profile } from "../data/content";
 import "./Hero.css";
 
@@ -90,7 +90,8 @@ export default function Hero() {
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
           >
-            Alansari Holding
+            <span className="hero__floating-dot" />
+            Available for work
           </motion.div>
         </motion.div>
       </div>
