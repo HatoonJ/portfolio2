@@ -31,6 +31,23 @@ import cpjCover from "../assets/projects/cpj/cpj.webp";
 
 import aiJobCover from "../assets/projects/ai-job-copilot/cover.webp";
 import momentumCover from "../assets/projects/momentum/cover.webp";
+
+import kanz1 from "../assets/projects/kanz-bakery/1-home-hero.webp";
+import kanz2 from "../assets/projects/kanz-bakery/2-bakers-choice.webp";
+import kanz3 from "../assets/projects/kanz-bakery/3-bakers-choice-cont.webp";
+import kanz4 from "../assets/projects/kanz-bakery/4-home-story-preview.webp";
+import kanz5 from "../assets/projects/kanz-bakery/5-neighborhood-favorites.webp";
+import kanz6 from "../assets/projects/kanz-bakery/6-menu-header.webp";
+import kanz7 from "../assets/projects/kanz-bakery/7-menu-grid-2.webp";
+import kanz8 from "../assets/projects/kanz-bakery/8-menu-grid-3.webp";
+import kanz9 from "../assets/projects/kanz-bakery/9-catering-hero.webp";
+import kanz10 from "../assets/projects/kanz-bakery/10-catering-form.webp";
+import kanz11 from "../assets/projects/kanz-bakery/11-catering-footer.webp";
+import kanz12 from "../assets/projects/kanz-bakery/12-our-story-hero.webp";
+import kanz13 from "../assets/projects/kanz-bakery/13-our-craft.webp";
+import kanz14 from "../assets/projects/kanz-bakery/14-our-craft-cards.webp";
+import kanz15 from "../assets/projects/kanz-bakery/15-our-story-footer.webp";
+
 import bakery1 from "../assets/projects/hatoon-bakery/1.webp";
 import bakery2 from "../assets/projects/hatoon-bakery/2.webp";
 import bakery3 from "../assets/projects/hatoon-bakery/3.webp";
@@ -46,6 +63,20 @@ import bakery12 from "../assets/projects/hatoon-bakery/12.webp";
 import bakery13 from "../assets/projects/hatoon-bakery/13.webp";
 import bakery14 from "../assets/projects/hatoon-bakery/14.webp";
 import bakery15 from "../assets/projects/hatoon-bakery/15.webp";
+
+import talentAiCover from "../assets/projects/talent-ai/cover-login.webp";
+import talentAiPlatformAdmin from "../assets/projects/talent-ai/platform-admin-overview.webp";
+import talentAiAuditLogs from "../assets/projects/talent-ai/audit-logs.webp";
+import talentAiWorkspace from "../assets/projects/talent-ai/workspace-overview.webp";
+import talentAiJobsList from "../assets/projects/talent-ai/jobs-list.webp";
+import talentAiJobDetail from "../assets/projects/talent-ai/job-detail-applicants.webp";
+import talentAiScreening from "../assets/projects/talent-ai/ai-screening-analysis.webp";
+import talentAiAnalytics from "../assets/projects/talent-ai/hiring-analytics.webp";
+import talentAiCandidateDashboard from "../assets/projects/talent-ai/candidate-dashboard.webp";
+import talentAiBrowseJobs from "../assets/projects/talent-ai/candidate-browse-jobs.webp";
+import talentAiApplications from "../assets/projects/talent-ai/candidate-applications.webp";
+import talentAiAssessments from "../assets/projects/talent-ai/candidate-assessments.webp";
+
 import showlogCover from "../assets/projects/showlog/cover.webp";
 import eidCover from "../assets/projects/eid/cover.webp";
 import ramadanCover from "../assets/projects/ramadan/cover.webp";
@@ -274,6 +305,27 @@ export const moreProjects = [
 
 export const experiments = [
   {
+    id: "talent-ai",
+    name: "RecruitAI",
+    description: "A multi-tenant hiring platform with AI-driven candidate screening — role-based dashboards for platform admins, company admins, recruiters, hiring managers, and candidates, plus skill assessments and an audit log.",
+    tag: "Side Project",
+    image: talentAiCover,
+    gallery: [
+      { src: talentAiPlatformAdmin, alt: "RecruitAI — Platform Admin overview" },
+      { src: talentAiAuditLogs, alt: "RecruitAI — Security Audit Logs" },
+      { src: talentAiWorkspace, alt: "RecruitAI — Company workspace overview" },
+      { src: talentAiJobsList, alt: "RecruitAI — Jobs list" },
+      { src: talentAiJobDetail, alt: "RecruitAI — Job detail with applicants" },
+      { src: talentAiScreening, alt: "RecruitAI — AI screening analysis on a candidate application" },
+      { src: talentAiAnalytics, alt: "RecruitAI — Hiring analytics" },
+      { src: talentAiCandidateDashboard, alt: "RecruitAI — Candidate portal dashboard" },
+      { src: talentAiBrowseJobs, alt: "RecruitAI — Candidate browse jobs" },
+      { src: talentAiApplications, alt: "RecruitAI — Candidate application history" },
+      { src: talentAiAssessments, alt: "RecruitAI — Candidate skill assessments" },
+    ],
+    link: { label: "View Live", href: "https://960625f0-57eb-466b-aaf9-57979e53a526-00-zzfi1szkelvw.sisko.replit.dev/login" },
+  },
+  {
     id: "ai-job-copilot",
     name: "AI Job Application Co-pilot",
     description: "Paste a CV and job description; an n8n workflow behind a Lovable front end analyzes the match and tailors the application.",
@@ -310,6 +362,30 @@ export const experiments = [
       { src: bakery15, alt: "Hatoon Bakery — checkout, Place Order and footer" },
     ],
     link: { label: "View Live", href: "https://fbd13c31-bbc9-4d69-bad6-e1458450414c-00-1hwq0he7uox3u.sisko.replit.dev/" },
+  },
+  {
+    id: "kanz-bakery",
+    name: "Kanz Bakery",
+    description: "An earlier concept bakery storefront built in Replit, with a full menu, a catering request flow, and a brand story page.",
+    tag: "Hackathon",
+    image: kanz1,
+    gallery: [
+      { src: kanz2, alt: "Kanz Bakery — Baker's Choice featured grid" },
+      { src: kanz3, alt: "Kanz Bakery — Baker's Choice grid continued" },
+      { src: kanz4, alt: "Kanz Bakery — homepage story preview" },
+      { src: kanz5, alt: "Kanz Bakery — Neighborhood Favorites and footer" },
+      { src: kanz6, alt: "Kanz Bakery — Our Menu page with category filters" },
+      { src: kanz7, alt: "Kanz Bakery — menu grid" },
+      { src: kanz8, alt: "Kanz Bakery — menu grid continued" },
+      { src: kanz9, alt: "Kanz Bakery — Catering page hero and service cards" },
+      { src: kanz10, alt: "Kanz Bakery — catering quote request form" },
+      { src: kanz11, alt: "Kanz Bakery — catering page footer" },
+      { src: kanz12, alt: "Kanz Bakery — Our Story page hero" },
+      { src: kanz13, alt: "Kanz Bakery — Our Craft section" },
+      { src: kanz14, alt: "Kanz Bakery — Our Craft feature cards" },
+      { src: kanz15, alt: "Kanz Bakery — Our Story page footer" },
+    ],
+    link: { label: "View Live", href: "https://6a97b760-4be3-4cd0-bdfb-b16df764eb61-00-5n4ozgcikhyd.pike.replit.dev/" },
   },
   {
     id: "showlog",
