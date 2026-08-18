@@ -31,7 +31,21 @@ import cpjCover from "../assets/projects/cpj/cpj.webp";
 
 import aiJobCover from "../assets/projects/ai-job-copilot/cover.webp";
 import momentumCover from "../assets/projects/momentum/cover.webp";
-import bakeryCover from "../assets/projects/hatoon-bakery/cover.webp";
+import bakery1 from "../assets/projects/hatoon-bakery/1.webp";
+import bakery2 from "../assets/projects/hatoon-bakery/2.webp";
+import bakery3 from "../assets/projects/hatoon-bakery/3.webp";
+import bakery4 from "../assets/projects/hatoon-bakery/4.webp";
+import bakery5 from "../assets/projects/hatoon-bakery/5.webp";
+import bakery6 from "../assets/projects/hatoon-bakery/6.webp";
+import bakery7 from "../assets/projects/hatoon-bakery/7.webp";
+import bakery8 from "../assets/projects/hatoon-bakery/8.webp";
+import bakery9 from "../assets/projects/hatoon-bakery/9.webp";
+import bakery10 from "../assets/projects/hatoon-bakery/10.webp";
+import bakery11 from "../assets/projects/hatoon-bakery/11.webp";
+import bakery12 from "../assets/projects/hatoon-bakery/12.webp";
+import bakery13 from "../assets/projects/hatoon-bakery/13.webp";
+import bakery14 from "../assets/projects/hatoon-bakery/14.webp";
+import bakery15 from "../assets/projects/hatoon-bakery/15.webp";
 import showlogCover from "../assets/projects/showlog/cover.webp";
 import eidCover from "../assets/projects/eid/cover.webp";
 import ramadanCover from "../assets/projects/ramadan/cover.webp";
@@ -58,7 +72,7 @@ export const intro = {
   eyebrow: "About",
   heading: "Real systems, not just interfaces.",
   paragraphs: [
-    "I'm a Software Engineer at Alansari Holding, where I design and build the backend systems, APIs, and automation that real business operations depend on — from ERP-integrated chatbots to internal platforms used across dozens of branches.",
+    "I'm a Software Engineer at Alansari Holding, where I design and build the backend systems, APIs, and automation that power both internal operations and the tools our customers and tenants use directly.",
     "My background is Management Information Systems, which is why I care as much about how a system fits into a business process as how it's coded. I build full-stack, but the part I care most about is what happens between the request and the response.",
   ],
   pillars: [
@@ -278,7 +292,24 @@ export const experiments = [
     name: "Hatoon Bakery",
     description: "A concept bakery storefront built in Replit, exploring how fast a full site can go from prompt to live.",
     tag: "Hackathon",
-    image: bakeryCover,
+    image: bakery1,
+    gallery: [
+      { src: bakery2, alt: "Hatoon Bakery — Fresh from the Oven product grid" },
+      { src: bakery3, alt: "Hatoon Bakery — product grid and homepage Our Story preview" },
+      { src: bakery4, alt: "Hatoon Bakery — call-to-action and footer" },
+      { src: bakery5, alt: "Hatoon Bakery — Our Menu page with category filters" },
+      { src: bakery6, alt: "Hatoon Bakery — menu product grid" },
+      { src: bakery7, alt: "Hatoon Bakery — menu product grid and footer" },
+      { src: bakery8, alt: "Hatoon Bakery — Our Story page hero" },
+      { src: bakery9, alt: "Hatoon Bakery — Our Story, hands in the dough section" },
+      { src: bakery10, alt: "Hatoon Bakery — Uncompromising Ingredients section" },
+      { src: bakery11, alt: "Hatoon Bakery — A Place to Gather section" },
+      { src: bakery12, alt: "Hatoon Bakery — Get in Touch contact page" },
+      { src: bakery13, alt: "Hatoon Bakery — contact form" },
+      { src: bakery14, alt: "Hatoon Bakery — checkout, Complete Your Order" },
+      { src: bakery15, alt: "Hatoon Bakery — checkout, Place Order and footer" },
+    ],
+    link: { label: "View Live", href: "https://fbd13c31-bbc9-4d69-bad6-e1458450414c-00-1hwq0he7uox3u.sisko.replit.dev/" },
   },
   {
     id: "showlog",

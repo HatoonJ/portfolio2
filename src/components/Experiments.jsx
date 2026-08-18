@@ -31,27 +31,44 @@ export default function Experiments() {
       </div>
 
       <div className="experiments__track" ref={trackRef}>
-        {experiments.map((e) => (
-          <article className="exp-card" key={e.id}>
-            <button
-              className="exp-card__image"
-              onClick={() => openLightbox([{ src: e.image, alt: e.name }], 0)}
-              aria-label={`View image for ${e.name}`}
-            >
-              <img src={e.image} alt={e.name} loading="lazy" />
-              <span className="exp-card__tag">{e.tag}</span>
-            </button>
-            <div className="exp-card__body">
-              <h3>{e.name}</h3>
-              <p>{e.description}</p>
-              {e.link && (
-                <a href={e.link.href} target="_blank" rel="noreferrer" className="exp-card__link">
-                  {e.link.label} ↗
-                </a>
-              )}
-            </div>
-          </article>
-        ))}
+        {experiments.map((e) => {
+          const images = [
+            { src: e.image, alt: e.name },
+            ...(e.gallery || []),
+          ];
+          const hasGallery = images.length > 1;
+
+          return (
+            <article className="exp-card" key={e.id}>
+              <button
+                className="exp-card__image"
+                onClick={() => openLightbox(images, 0)}
+                aria-label={
+                  hasGallery
+                    ? `View ${images.length} images for ${e.name}`
+                    : `View image for ${e.name}`
+                }
+              >
+                <img src={e.image} alt={e.name} loading="lazy" />
+                <span className="exp-card__tag">{e.tag}</span>
+                {hasGallery && (
+                  <span className="exp-card__gallery-hint">
+                    {images.length} photos
+                  </span>
+                )}
+              </button>
+              <div className="exp-card__body">
+                <h3>{e.name}</h3>
+                <p>{e.description}</p>
+                {e.link && (
+                  <a href={e.link.href} target="_blank" rel="noreferrer" className="exp-card__link">
+                    {e.link.label} ↗
+                  </a>
+                )}
+              </div>
+            </article>
+          );
+        })}
         <div className="experiments__spacer" aria-hidden="true" />
       </div>
     </section>
