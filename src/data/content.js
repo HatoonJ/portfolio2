@@ -23,14 +23,22 @@ import triageResult2 from "../assets/projects/ai-triage/result2.webp";
 import triageGwr from "../assets/projects/ai-triage/gwr-certificate.webp";
 
 import mixcareDashboard from "../assets/projects/mixcare/dashboard.webp";
-import contract1 from "../assets/projects/contracts/report1.webp";
-import contract2 from "../assets/projects/contracts/report2.webp";
+import contract1 from "../assets/projects/contracts/contract_status_report_1.png";
+import contract2 from "../assets/projects/contracts/contract_status_report_2.png";
+import contract3 from "../assets/projects/contracts/contract_status_report_3.png";
 import careerIndex from "../assets/projects/career/index.webp";
 import careerForms from "../assets/projects/career/forms.webp";
+import coopWelcome from "../assets/projects/career/coop/coop.webp";
+import coopInstructions from "../assets/projects/career/coop/instruction.webp";
+import coopForm1 from "../assets/projects/career/coop/form1.webp";
+import coopForm2 from "../assets/projects/career/coop/form2.webp";
 import cpjCover from "../assets/projects/cpj/cpj.webp";
+import cpjSignup from "../assets/projects/cpj/signup.webp";
+import cpjForm from "../assets/projects/cpj/form.webp";
+import cpjSitemap from "../assets/projects/cpj/sitemap.webp";
 
 import aiJobCover from "../assets/projects/ai-job-copilot/cover.webp";
-import momentumCover from "../assets/projects/momentum/cover.webp";
+import momentumCover from "../assets/projects/momentum/cover.png";
 
 import kanz1 from "../assets/projects/kanz-bakery/1-home-hero.webp";
 import kanz2 from "../assets/projects/kanz-bakery/2-bakers-choice.webp";
@@ -77,9 +85,23 @@ import talentAiBrowseJobs from "../assets/projects/talent-ai/candidate-browse-jo
 import talentAiApplications from "../assets/projects/talent-ai/candidate-applications.webp";
 import talentAiAssessments from "../assets/projects/talent-ai/candidate-assessments.webp";
 
-import showlogCover from "../assets/projects/showlog/cover.webp";
+import showlogCover from "../assets/projects/showlog/home1.png";
+import showlogHome2 from "../assets/projects/showlog/home2.png";
+import showlogCalendar from "../assets/projects/showlog/calendar.png";
+import showlogLibrary from "../assets/projects/showlog/laibary.png";
+import showlogStats1 from "../assets/projects/showlog/stats1.png";
+import showlogStats2 from "../assets/projects/showlog/stats2.png";
 import eidCover from "../assets/projects/eid/cover.webp";
+import eidAdhaFormEn from "../assets/projects/eid/al-adha-form-en.webp";
+import eidAdhaFormEn2 from "../assets/projects/eid/al-adha-form-en2.webp";
+import eidFitrIndex from "../assets/projects/eid/al-fitr-index.webp";
+import eidFitrIndex2 from "../assets/projects/eid/al-fitr-index2.webp";
+import eidFitrFormEn from "../assets/projects/eid/al-fitr-form-en.webp";
+import eidFitrFormAr from "../assets/projects/eid/al-fitr-form-ar.webp";
 import ramadanCover from "../assets/projects/ramadan/cover.webp";
+import ramadanEn from "../assets/projects/ramadan/en.webp";
+import ramadanAr from "../assets/projects/ramadan/ar.webp";
+import ramadanResult from "../assets/projects/ramadan/result.webp";
 import birthdayCover from "../assets/projects/happy-birthday/cover.webp";
 
 export const profile = {
@@ -268,6 +290,7 @@ export const moreProjects = [
     stack: ["PHP", "MySQL", "Excel", "PhpSpreadsheet", "SMTP"],
     image: contract1,
     image2: contract2,
+    gallery: [{ src: contract3, alt: "Automated Tenant Contracts Report — emailed report, continued" }],
   },
   {
     id: "n8n-automation-suite",
@@ -286,7 +309,14 @@ export const moreProjects = [
     stack: ["PHP", "MySQL", "Bootstrap"],
     image: careerIndex,
     image2: careerForms,
-    link: { label: "View Live", href: "https://alansari.com.sa/career" },
+    gallery: [
+      { src: coopWelcome, alt: "Alansari COOP Program — welcome and language selection" },
+      { src: coopInstructions, alt: "Alansari COOP Program — instructions and required documents" },
+      { src: coopForm1, alt: "Alansari COOP application form — personal information and qualifications" },
+      { src: coopForm2, alt: "Alansari COOP application form — qualifications and file uploads" },
+    ],
+    link: { label: "View Career Site", href: "https://alansari.com.sa/career" },
+    link2: { label: "View Co-op Site", href: "https://alansari.com.sa/coop" },
   },
   {
     id: "cpj",
@@ -295,6 +325,11 @@ export const moreProjects = [
       "My graduation project: a full-stack platform connecting students looking for part-time work with café owners through an online resume system.",
     stack: ["PHP", "MySQL", "Bootstrap", "Apache"],
     image: cpjCover,
+    gallery: [
+      { src: cpjSignup, alt: "CPJ — student sign up form" },
+      { src: cpjForm, alt: "CPJ — student profile with experience, skills, and availability" },
+      { src: cpjSitemap, alt: "CPJ — full site map of pages and user flows" },
+    ],
     link: { label: "Documentation", href: "/documents/cpj-docs.pdf" },
   },
 ];
@@ -393,6 +428,13 @@ export const experiments = [
     description: "A self-hosted, ad-free alternative to TV Time — watch history, an “Up Next” calendar, ratings, and custom lists. Currently in architecture/design.",
     tag: "Design Spec",
     image: showlogCover,
+    gallery: [
+      { src: showlogHome2, alt: "ShowLog — Home, Coming Up and Recently Added" },
+      { src: showlogCalendar, alt: "ShowLog — Calendar, upcoming episodes by day" },
+      { src: showlogLibrary, alt: "ShowLog — Library grid with watch status filters" },
+      { src: showlogStats1, alt: "ShowLog — Stats, hours and episodes watched, favorite genres" },
+      { src: showlogStats2, alt: "ShowLog — Stats, favorite genres and watch streak" },
+    ],
   },
   {
     id: "eid-cards",
@@ -400,7 +442,16 @@ export const experiments = [
     description: "Two Eid greeting-card tools for Al Ansari Holding — one customized per subsidiary, one unified across the holding group.",
     tag: "Creative",
     image: eidCover,
+    gallery: [
+      { src: eidAdhaFormEn, alt: "Eid al-Adha Greeting — personalize and send form" },
+      { src: eidAdhaFormEn2, alt: "Eid al-Adha Greeting — personalize and send form, alternate" },
+      { src: eidFitrIndex, alt: "Eid al-Fitr Greeting — language selection" },
+      { src: eidFitrIndex2, alt: "Eid al-Fitr Greeting — language selection, alternate" },
+      { src: eidFitrFormEn, alt: "Eid al-Fitr Greeting — English form" },
+      { src: eidFitrFormAr, alt: "Eid al-Fitr Greeting — Arabic form" },
+    ],
     link: { label: "Al-Adha", href: "http://alansari.com.sa/greeting-cards/al-Adha" },
+    link2: { label: "Al-Fitr", href: "https://alansari.com.sa/greeting-cards/al-Fitr/" },
   },
   {
     id: "ramadan-card",
@@ -408,6 +459,11 @@ export const experiments = [
     description: "An interactive Ramadan greeting card for Al Ansari Holding, built to share warm wishes with a polished, on-brand experience.",
     tag: "Creative",
     image: ramadanCover,
+    gallery: [
+      { src: ramadanEn, alt: "Ramadan Greeting Card — English form to personalize and send" },
+      { src: ramadanAr, alt: "Ramadan Greeting Card — Arabic form to personalize and send" },
+      { src: ramadanResult, alt: "Ramadan Greeting Card — final personalized card" },
+    ],
     link: { label: "View Card", href: "https://alansari.com.sa/greeting-cards/ramadan/" },
   },
   {

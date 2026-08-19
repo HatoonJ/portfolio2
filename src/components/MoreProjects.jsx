@@ -19,16 +19,28 @@ export default function MoreProjects() {
 
         <div className="more-projects__grid">
           {moreProjects.map((p, i) => {
-            const images = [p.image, p.image2].filter(Boolean).map((src) => ({ src, alt: p.name }));
+            const images = [
+              p.image && { src: p.image, alt: p.name },
+              p.image2 && { src: p.image2, alt: p.name },
+              ...(p.gallery || []),
+            ].filter(Boolean);
+            const hasGallery = images.length > 1;
             return (
               <Reveal className="mp-card" delay={(i % 3) * 0.08} key={p.id}>
                 {images.length > 0 ? (
                   <button
                     className="mp-card__image"
                     onClick={() => openLightbox(images, 0)}
-                    aria-label={`View screenshots for ${p.name}`}
+                    aria-label={
+                      hasGallery
+                        ? `View ${images.length} images for ${p.name}`
+                        : `View image for ${p.name}`
+                    }
                   >
                     <img src={images[0].src} alt={p.name} loading="lazy" />
+                    {hasGallery && (
+                      <span className="mp-card__gallery-hint">{images.length} photos</span>
+                    )}
                   </button>
                 ) : (
                   <div className="mp-card__image mp-card__image--placeholder" aria-hidden="true">
@@ -45,10 +57,19 @@ export default function MoreProjects() {
                       </span>
                     ))}
                   </div>
-                  {p.link && (
-                    <a href={p.link.href} target="_blank" rel="noreferrer" className="mp-card__link">
-                      {p.link.label} ↗
-                    </a>
+                  {(p.link || p.link2) && (
+                    <div className="mp-card__links">
+                      {p.link && (
+                        <a href={p.link.href} target="_blank" rel="noreferrer" className="mp-card__link">
+                          {p.link.label} ↗
+                        </a>
+                      )}
+                      {p.link2 && (
+                        <a href={p.link2.href} target="_blank" rel="noreferrer" className="mp-card__link">
+                          {p.link2.label} ↗
+                        </a>
+                      )}
+                    </div>
                   )}
                 </div>
               </Reveal>

@@ -60,10 +60,19 @@ export default function Experiments() {
               <div className="exp-card__body">
                 <h3>{e.name}</h3>
                 <p>{e.description}</p>
-                {e.link && (
-                  <a href={e.link.href} target="_blank" rel="noreferrer" className="exp-card__link">
-                    {e.link.label} ↗
-                  </a>
+                {(e.link || e.link2) && (
+                  <div className="exp-card__links">
+                    {e.link && (
+                      <a href={e.link.href} target="_blank" rel="noreferrer" className="exp-card__link">
+                        {e.link.label} ↗
+                      </a>
+                    )}
+                    {e.link2 && (
+                      <a href={e.link2.href} target="_blank" rel="noreferrer" className="exp-card__link">
+                        {e.link2.label} ↗
+                      </a>
+                    )}
+                  </div>
                 )}
               </div>
             </article>
