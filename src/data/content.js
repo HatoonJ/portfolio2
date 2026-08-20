@@ -3,15 +3,11 @@
 // Every fact below is drawn from Hatoon's resume and existing portfolio copy.
 // ---------------------------------------------------------------------------
 
-import qrmChat1 from "../assets/projects/qrm/chat1.webp";
-import qrmIphone from "../assets/projects/qrm/iphone-chat1.webp";
+import qrmChat1Portrait from "../assets/projects/qrm/chat1-portrait.png";
 
 import bayanAgent from "../assets/projects/bayan/agent.webp";
-import bayanAgent2 from "../assets/projects/bayan/agent2.webp";
-import bayanChat1 from "../assets/projects/bayan/chat1.webp";
-import bayanChat2 from "../assets/projects/bayan/chat2.webp";
-import bayanIphone1 from "../assets/projects/bayan/iphone-chat1.webp";
-import bayanIphone2 from "../assets/projects/bayan/iphone-chat2.webp";
+import bayanChat1Portrait from "../assets/projects/bayan/chat1-portrait.png";
+import bayanChat2Portrait from "../assets/projects/bayan/chat2-portrait.png";
 
 import cafmDashboard from "../assets/projects/cafm/dashboard.webp";
 import cafmAbyan1 from "../assets/projects/cafm/abyan1.webp";
@@ -91,13 +87,10 @@ import showlogCalendar from "../assets/projects/showlog/calendar.png";
 import showlogLibrary from "../assets/projects/showlog/laibary.png";
 import showlogStats1 from "../assets/projects/showlog/stats1.png";
 import showlogStats2 from "../assets/projects/showlog/stats2.png";
-import eidCover from "../assets/projects/eid/cover.webp";
-import eidAdhaFormEn from "../assets/projects/eid/al-adha-form-en.webp";
-import eidAdhaFormEn2 from "../assets/projects/eid/al-adha-form-en2.webp";
-import eidFitrIndex from "../assets/projects/eid/al-fitr-index.webp";
-import eidFitrIndex2 from "../assets/projects/eid/al-fitr-index2.webp";
-import eidFitrFormEn from "../assets/projects/eid/al-fitr-form-en.webp";
-import eidFitrFormAr from "../assets/projects/eid/al-fitr-form-ar.webp";
+import eidAdha from "../assets/projects/eid/al-Adha.png";
+import eidAdha3 from "../assets/projects/eid/al-Adha3.png";
+import eidFitr2 from "../assets/projects/eid/al-Fitr2.png";
+import eidFitr3 from "../assets/projects/eid/al-Fitr3.png";
 import ramadanCover from "../assets/projects/ramadan/cover.webp";
 import ramadanEn from "../assets/projects/ramadan/en.webp";
 import ramadanAr from "../assets/projects/ramadan/ar.webp";
@@ -161,8 +154,7 @@ export const caseStudies = [
     results: null,
     stack: ["Twilio", ".NET Core API", "C#", "Entity Framework", "MySQL", "Bootstrap", "Azure Microservice", "SMTP", "VCF"],
     images: [
-      { src: qrmChat1, alt: "QRM WhatsApp chatbot conversation" },
-      { src: qrmIphone, alt: "QRM chatbot on iPhone" },
+      { src: qrmChat1Portrait, alt: "QRM WhatsApp chatbot conversation" },
     ],
     links: [],
   },
@@ -187,9 +179,8 @@ export const caseStudies = [
     results: null,
     stack: ["ManyChat", ".NET Core API", "C#", "MySQL", "Twilio", "MailKit"],
     images: [
-      { src: bayanChat1, alt: "Bayan Virtual Assistant WhatsApp conversation" },
-      { src: bayanIphone1, alt: "Bayan Virtual Assistant on iPhone" },
-      { src: bayanChat2, alt: "Bayan Virtual Assistant conversation flow" },
+      { src: bayanChat1Portrait, alt: "Bayan Virtual Assistant WhatsApp conversation" },
+      { src: bayanChat2Portrait, alt: "Bayan Virtual Assistant conversation flow" },
       { src: bayanAgent, alt: "Bayan Virtual Assistant live agent handoff" },
     ],
     links: [],
@@ -441,14 +432,11 @@ export const experiments = [
     name: "Eid Card Generators",
     description: "Two Eid greeting-card tools for Al Ansari Holding — one customized per subsidiary, one unified across the holding group.",
     tag: "Creative",
-    image: eidCover,
+    image: eidAdha,
     gallery: [
-      { src: eidAdhaFormEn, alt: "Eid al-Adha Greeting — personalize and send form" },
-      { src: eidAdhaFormEn2, alt: "Eid al-Adha Greeting — personalize and send form, alternate" },
-      { src: eidFitrIndex, alt: "Eid al-Fitr Greeting — language selection" },
-      { src: eidFitrIndex2, alt: "Eid al-Fitr Greeting — language selection, alternate" },
-      { src: eidFitrFormEn, alt: "Eid al-Fitr Greeting — English form" },
-      { src: eidFitrFormAr, alt: "Eid al-Fitr Greeting — Arabic form" },
+      { src: eidAdha3, alt: "Eid al-Adha Greeting Card, alternate" },
+      { src: eidFitr2, alt: "Eid al-Fitr Greeting Card" },
+      { src: eidFitr3, alt: "Eid al-Fitr Greeting Card, alternate" },
     ],
     link: { label: "Al-Adha", href: "http://alansari.com.sa/greeting-cards/al-Adha" },
     link2: { label: "Al-Fitr", href: "https://alansari.com.sa/greeting-cards/al-Fitr/" },
