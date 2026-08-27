@@ -17,10 +17,11 @@ npm run build
 
 Outputs a production build to `dist/`.
 
-## Deploying to GitHub Pages (hatoonj.github.io/portfolio)
+## Deploying to GitHub Pages (hatoonj.github.io/portfolio2)
 
-The site is configured with `base: "/portfolio/"` in `vite.config.js` to match the
-existing project site at `https://hatoonj.github.io/portfolio/`.
+The site is configured with `base: "/portfolio2/"` in `vite.config.js` to match the
+project site at `https://hatoonj.github.io/portfolio2/`. This is a separate site
+from the older `https://hatoonj.github.io/portfolio/`.
 
 **Option A — gh-pages branch (simplest):**
 
