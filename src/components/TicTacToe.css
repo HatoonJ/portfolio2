@@ -42,12 +42,14 @@
 
 .ttt__board {
   display: grid;
-  grid-template-columns: repeat(3, 72px);
-  grid-template-rows: repeat(3, 72px);
+  grid-template-columns: repeat(3, 1fr);
   gap: 8px;
+  width: 100%;
+  max-width: 232px;
 }
 
 .ttt__cell {
+  aspect-ratio: 1 / 1;
   background: var(--bg-elevated-2);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -62,11 +64,4 @@
 .ttt__cell:hover {
   background: var(--accent-soft);
   border-color: var(--accent-line);
-}
-
-@media (max-width: 480px) {
-  .ttt__board {
-    grid-template-columns: repeat(3, 30vw);
-    grid-template-rows: repeat(3, 30vw);
-  }
 }

@@ -223,8 +223,12 @@
     gap: 32px;
   }
   .case-study__index {
-    top: 20px;
-    font-size: 22vw;
+    position: static;
+    top: auto;
+    left: auto;
+    display: block;
+    font-size: 48px;
+    margin-bottom: 12px;
   }
 }
 
