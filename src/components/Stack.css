@@ -13,6 +13,12 @@
   padding: 32px;
 }
 
+/* If the last group is alone in the final row, let it span the full width
+   instead of leaving an empty cell next to it. */
+.stack__group:last-child:nth-child(odd) {
+  grid-column: 1 / -1;
+}
+
 .stack__group h3 {
   font-size: 13px;
   font-weight: 700;

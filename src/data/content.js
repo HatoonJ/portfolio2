@@ -33,6 +33,7 @@ import cpjSignup from "../assets/projects/cpj/signup.webp";
 import cpjForm from "../assets/projects/cpj/form.webp";
 import cpjSitemap from "../assets/projects/cpj/sitemap.webp";
 
+import vendorPortalCover from "../assets/projects/vendor-portal/cover.png";
 import aiJobCover from "../assets/projects/ai-job-copilot/cover.webp";
 import momentumCover from "../assets/projects/momentum/cover.png";
 
@@ -152,7 +153,7 @@ export const caseStudies = [
       "Automated post-payment feedback collection",
     ],
     results: null,
-    stack: ["Twilio", ".NET Core API", "C#", "Entity Framework", "MySQL", "Bootstrap", "Azure Microservice", "SMTP", "VCF"],
+    stack: ["Twilio", ".NET Core API", "C#", "Entity Framework", "MySQL", "Bootstrap", "Azure Microservice", "GraphQL", "Webhooks", "VCF"],
     images: [
       { src: qrmChat1Portrait, alt: "QRM WhatsApp chatbot conversation" },
     ],
@@ -258,19 +259,27 @@ export const caseStudies = [
 
 export const moreProjects = [
   {
+    id: "vendor-portal",
+    name: "Vendor Portal Integrated with D365 F&O",
+    description:
+      "A vendor portal on Azure with Microsoft authentication, built in a clean layered ASP.NET Core MVC architecture. Syncs 5,000+ vendors from Dynamics 365 Finance & Operations across six group companies, with an approval workflow, change requests, SLA tracking, and admin and executive dashboards.",
+    stack: ["ASP.NET Core MVC", "C#", "Azure", "Dynamics 365 F&O", "Microsoft Entra ID"],
+    image: vendorPortalCover,
+  },
+  {
     id: "mixcare",
     name: "MixCare",
     description:
       "A web-based CRM portal for Qanbar Ready Mix to manage customer interactions, complaints, and tickets. Admins reply inside the portal; responses reach customers on WhatsApp automatically.",
-    stack: [".NET Core API", "C#", "Entity Framework", "Azure Microservice", "MySQL", "REST API"],
+    stack: [".NET Core API", "C#", "Entity Framework", "Azure Microservice", "MySQL", "REST API", "Microsoft Entra ID", "Service Bus", "Logic Apps"],
     image: mixcareDashboard,
   },
   {
     id: "readymix-portal",
-    name: "Readymix Document Portal",
+    name: "Readymix Customer Portal",
     description:
-      "A document portal for Qanbar Ready Mix. Admins and customer admins upload customer documents; customers log in to see only their own.",
-    stack: [".NET Core API", "C#", "MySQL"],
+      "A secure ASP.NET Core MVC customer portal for Qanbar ReadyMix with role-based access — admins and customer admins upload customer documents, customers log in to see only their own, backed by Azure Blob Storage and Microsoft Graph API.",
+    stack: ["ASP.NET Core MVC", "C#", "Azure Blob Storage", "Microsoft Graph API", "MySQL"],
     image: null,
   },
   {
@@ -469,9 +478,10 @@ export const experiments = [
 
 export const stack = {
   "Languages": ["PHP", "C#", "JavaScript", "SQL", "HTML", "CSS", "Visual Basic"],
-  "Frameworks & Data": ["ASP.NET Core", "Entity Framework", "Bootstrap", "MySQL", "IIS", "Azure"],
-  "APIs & Automation": ["REST APIs", "Twilio", "WhatsApp API", "ManyChat", "n8n", "MailKit"],
-  "Tools": ["Git", "CI/CD", "Draw.io", "UML", "Windows Task Scheduler"],
+  "Frameworks & Data": ["ASP.NET Core MVC", "Entity Framework", "Bootstrap", "MySQL", "SQL Server", "IIS"],
+  "Cloud & Integration": ["Azure", "Azure App Service", "Azure Functions", "Logic Apps", "Service Bus", "Azure VMs", "Webhooks", "Azure Blob Storage", "Microsoft Graph API", "Dynamics 365 F&O", "Azure DevOps"],
+  "APIs & Automation": ["REST APIs", "Twilio", "WhatsApp API", "ManyChat", "n8n", "Power Automate", "MailKit"],
+  "Tools": ["Git", "CI/CD", "Draw.io", "UML", "Windows Task Scheduler", "Claude Code"],
 };
 
 // ---------------------------------------------------------------------------
@@ -484,10 +494,13 @@ export const experience = [
     org: "Alansari Holding",
     period: "Jul 2024 — Present",
     points: [
+      "Building a vendor portal on Azure (ASP.NET Core MVC) with Microsoft authentication, syncing 5,000+ vendors from Dynamics 365 F&O across six group companies — approval workflows, change requests, SLA tracking, and dashboards",
       "Building WhatsApp chatbots (QRM Chatbot, Bayan Virtual Assistant) integrated with ERP/CAFM systems using Twilio and ManyChat",
       "Leading the ABYAN CAFM facility-management platform",
+      "Developed a secure ASP.NET Core MVC customer portal for Qanbar ReadyMix with role-based access, Azure Blob Storage, and Microsoft Graph API",
+      "Mentoring a software engineering co-op student in .NET development and Azure deployment",
       "Managing Azure cloud deployment, virtual machines, and storage for internal web apps",
-      "Automating monthly CAFM contract reports and career/co-op data exports to Excel",
+      "Automating monthly CAFM contract reports, chatbot usage summaries, and career/co-op data exports, with emailed insights to management",
       "Managing domains, SSL certificates, and secure access across internal platforms",
       "Supported IT Ops during a cyberattack, coordinating device scans across 15+ branches",
     ],
