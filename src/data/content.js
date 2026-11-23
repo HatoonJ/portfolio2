@@ -104,7 +104,7 @@ export const profile = {
   email: "hetoon_j@icloud.com",
   linkedin: "https://www.linkedin.com/in/hatoon-alsaihati",
   github: "https://github.com/hatoonj",
-  cvPath: "/documents/Hatoon-Alsaihati-CV.pdf",
+  cvPath: `${import.meta.env.BASE_URL}documents/Hatoon-Alsaihati-CV.pdf`,
   location: "Saudi Arabia",
 };
 
@@ -247,8 +247,8 @@ export const caseStudies = [
     ],
     links: [
       { label: "Competency Passport", href: "https://try.ka.nz/ai/hatoonalsaihati" },
-      { label: "Workshop Certificate", href: "/documents/kanz-ai-workshop-certificate.pdf" },
-      { label: "GWR Certificate", href: "/documents/guinness-world-records.pdf" },
+      { label: "Workshop Certificate", href: `${import.meta.env.BASE_URL}documents/kanz-ai-workshop-certificate.pdf` },
+      { label: "GWR Certificate", href: `${import.meta.env.BASE_URL}documents/guinness-world-records.pdf` },
     ],
   },
 ];
@@ -330,7 +330,7 @@ export const moreProjects = [
       { src: cpjForm, alt: "CPJ — student profile with experience, skills, and availability" },
       { src: cpjSitemap, alt: "CPJ — full site map of pages and user flows" },
     ],
-    link: { label: "Documentation", href: "/documents/cpj-docs.pdf" },
+    link: { label: "Documentation", href: `${import.meta.env.BASE_URL}documents/cpj-docs.pdf` },
   },
 ];
 
@@ -538,7 +538,7 @@ export const recognition = {
   heading: "Guinness World Records™",
   detail:
     "Part of the Guinness World Records™ title for the most users in an AI video lesson (14,075 participants), from the Kanz AI Hackathon 2026, organized with Saudi Arabia's Ministry of Human Resources and Social Development.",
-  cta: { label: "View Certificate", href: "/documents/guinness-world-records.pdf" },
+  cta: { label: "View Certificate", href: `${import.meta.env.BASE_URL}documents/guinness-world-records.pdf` },
 };
 
 export const contact = {
