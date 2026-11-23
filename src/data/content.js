@@ -285,10 +285,10 @@ export const moreProjects = [
     description:
       "A secure ASP.NET Core MVC customer portal for Qanbar ReadyMix with role-based access — admins and customer admins upload customer documents, customers log in to see only their own, backed by Azure Blob Storage and Microsoft Graph API.",
     stack: ["ASP.NET Core MVC", "C#", "Azure Blob Storage", "Microsoft Graph API", "MySQL"],
-    image: readymixPortalDashboard,
-    image2: readymixPortalDocuments,
+    image: readymixPortalSignIn,
+    image2: readymixPortalDashboard,
     gallery: [
-      { src: readymixPortalSignIn, alt: "Readymix Customer Portal — sign in" },
+      { src: readymixPortalDocuments, alt: "Readymix Customer Portal — admin documents" },
       { src: readymixPortalJobOrders, alt: "Readymix Customer Portal — admin job orders" },
       { src: readymixPortalCustomer, alt: "Readymix Customer Portal — customer view, own documents only" },
     ],
