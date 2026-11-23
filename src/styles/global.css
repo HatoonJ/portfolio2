@@ -26,6 +26,28 @@
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+[data-theme="light"] {
+  /* Linen & Signal */
+  --bg: #f8f7f5;
+  --bg-elevated: #ffffff;
+  --bg-elevated-2: #f1efe9;
+  --bg-elevated-3: #e9e6dd;
+
+  --text: #15151a;
+  --text-muted: #55555f;
+  --text-dim: #7a7a84;
+
+  --accent: #5a46e6;
+  --accent-bright: #4435c9;
+  --accent-soft: rgba(90, 70, 230, 0.08);
+  --accent-line: rgba(90, 70, 230, 0.25);
+
+  --gold: #b8872e;
+
+  --border: rgba(10, 10, 20, 0.08);
+  --border-strong: rgba(10, 10, 20, 0.16);
+}
+
 * {
   box-sizing: border-box;
 }
@@ -46,6 +68,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  transition: background 0.3s var(--ease), color 0.3s var(--ease);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -194,6 +217,10 @@ ul {
 .btn-primary:hover {
   transform: translateY(-2px);
   background: var(--accent-bright);
+  color: #fff;
+}
+
+[data-theme="light"] .btn-primary {
   color: #fff;
 }
 

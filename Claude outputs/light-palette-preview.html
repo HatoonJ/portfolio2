@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Linen &amp; Signal — light palette preview</title>
+<style>
+  :root {
+    --bg: #f8f7f5;
+    --bg-elevated: #ffffff;
+    --bg-elevated-2: #f1efe9;
+    --bg-elevated-3: #e9e6dd;
+
+    --text: #15151a;
+    --text-muted: #55555f;
+    --text-dim: #7a7a84;
+
+    --accent: #5a46e6;
+    --accent-bright: #4435c9;
+    --accent-soft: rgba(90, 70, 230, 0.08);
+    --accent-line: rgba(90, 70, 230, 0.25);
+
+    --gold: #b8872e;
+
+    --border: rgba(10, 10, 20, 0.08);
+    --border-strong: rgba(10, 10, 20, 0.16);
+
+    --font-display: "Space Grotesk", "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    padding: 40px 24px 80px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: 22px;
+    margin: 0 0 4px;
+  }
+
+  .sub {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0 0 36px;
+  }
+
+  h2.section {
+    font-family: var(--font-display);
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin: 48px 0 16px;
+  }
+
+  .swatches {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 14px;
+  }
+
+  .swatch {
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    background: var(--bg-elevated);
+  }
+
+  .swatch__color {
+    height: 72px;
+  }
+
+  .swatch__label {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .swatch__name {
+    font-weight: 600;
+    display: block;
+  }
+
+  .swatch__hex {
+    color: var(--text-muted);
+    font-family: monospace;
+  }
+
+  .mock {
+    margin-top: 48px;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    background: var(--bg-elevated);
+    padding: 28px;
+    max-width: 480px;
+  }
+
+  .chip {
+    display: inline-block;
+    font-size: 12px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    border: 1px solid var(--accent-line);
+    color: var(--accent-bright);
+    margin: 0 6px 6px 0;
+  }
+
+  .mock h3 {
+    font-family: var(--font-display);
+    font-size: 17px;
+    margin: 0 0 8px;
+  }
+
+  .mock p {
+    font-size: 13.5px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0 0 16px;
+  }
+
+  .mock__cta {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 18px;
+    border-radius: 10px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  .mock__ghost {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 9px 18px;
+    border-radius: 10px;
+    border: 1px solid var(--border-strong);
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .recog {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    border-radius: 16px;
+    background: linear-gradient(120deg, rgba(184, 135, 46, 0.08), var(--accent-soft));
+    border: 1px solid rgba(184, 135, 46, 0.25);
+  }
+
+  .recog__icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: rgba(184, 135, 46, 0.14);
+    color: var(--gold);
+    font-size: 17px;
+  }
+
+  .recog__text h4 {
+    margin: 0 0 2px;
+    font-size: 14px;
+  }
+
+  .recog__text p {
+    margin: 0;
+    font-size: 12.5px;
+    color: var(--text-muted);
+  }
+</style>
+</head>
+<body>
+  <h1>Linen &amp; Signal</h1>
+  <p class="sub">Proposed light palette — same accent/gold identity as your current dark theme, just flipped to a warm off-white background.</p>
+
+  <h2 class="section">Backgrounds</h2>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="swatch__color" style="background:var(--bg)"></div>
+      <div class="swatch__label"><span class="swatch__name">bg</span><span class="swatch__hex">#f8f7f5</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch__color" style="background:var(--bg-elevated)"></div>
+      <div class="swatch__label"><span class="swatch__name">bg-elevated</span><span class="swatch__hex">#ffffff</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch__color" style="background:var(--bg-elevated-2)"></div>
+      <div class="swatch__label"><span class="swatch__name">bg-elevated-2</span><span class="swatch__hex">#f1efe9</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch__color" style="background:var(--bg-elevated-3)"></div>
+      <div class="swatch__label"><span class="swatch__name">bg-elevated-3</span><span class="swatch__hex">#e9e6dd</span></div>
+    </div>
+  </div>
+
+  <h2 class="section">Text</h2>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="swatch__color" style="background:var(--text)"></div>
+      <div class="swatch__label"><span class="swatch__name">text</span><span class="swatch__hex">#15151a</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch__color" style="background:var(--text-muted)"></div>
+      <div class="swatch__label"><span class="swatch__name">text-muted</span><span class="swatch__hex">#55555f</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch__color" style="background:var(--text-dim)"></div>
+      <div class="swatch__label"><span class="swatch__name">text-dim</span><span class="swatch__hex">#7a7a84</span></div>
+    </div>
+  </div>
+
+  <h2 class="section">Accent &amp; gold</h2>
+  <div class="swatches">
+    <div class="swatch">
+      <div class="swatch__color" style="background:var(--accent)"></div>
+      <div class="swatch__label"><span class="swatch__name">accent</span><span class="swatch__hex">#5a46e6</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch__color" style="background:var(--accent-bright)"></div>
+      <div class="swatch__label"><span class="swatch__name">accent-bright</span><span class="swatch__hex">#4435c9</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch__color" style="background:var(--gold)"></div>
+      <div class="swatch__label"><span class="swatch__name">gold</span><span class="swatch__hex">#b8872e</span></div>
+    </div>
+    <div class="swatch">
+      <div class="swatch__color" style="background:var(--border-strong)"></div>
+      <div class="swatch__label"><span class="swatch__name">border-strong</span><span class="swatch__hex">on white</span></div>
+    </div>
+  </div>
+
+  <h2 class="section">How it looks on a real card</h2>
+  <div class="mock">
+    <span class="chip">ASP.NET Core MVC</span>
+    <span class="chip">Azure</span>
+    <span class="chip">Microsoft Entra ID</span>
+    <h3>Vendor Portal Integrated with D365 F&amp;O</h3>
+    <p>A vendor portal on Azure with Microsoft authentication, syncing 5,000+ vendors from Dynamics 365 F&amp;O across six group companies.</p>
+    <a class="mock__cta" href="#">View case study</a>
+    <a class="mock__ghost" href="#">Live demo ↗</a>
+
+    <div class="recog">
+      <div class="recog__icon" aria-hidden="true">★</div>
+      <div class="recog__text">
+        <h4>Guinness World Records</h4>
+        <p>Recognized contribution — view certificate</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

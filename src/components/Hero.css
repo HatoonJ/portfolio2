@@ -31,6 +31,11 @@
   pointer-events: none;
 }
 
+[data-theme="light"] .hero__grid {
+  background-image: linear-gradient(rgba(10, 10, 20, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 10, 20, 0.05) 1px, transparent 1px);
+}
+
 .hero__inner {
   position: relative;
   display: grid;
@@ -125,6 +130,11 @@
   font-weight: 600;
   color: var(--text);
   box-shadow: 0 12px 30px -10px rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="light"] .hero__floating-card {
+  background: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 12px 30px -10px rgba(10, 10, 20, 0.18);
 }
 
 .hero__floating-card--top {
