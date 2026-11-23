@@ -33,6 +33,11 @@ import cpjSignup from "../assets/projects/cpj/signup.webp";
 import cpjForm from "../assets/projects/cpj/form.webp";
 import cpjSitemap from "../assets/projects/cpj/sitemap.webp";
 
+import readymixPortalDashboard from "../assets/projects/readymix-portal/dashboard.jpg";
+import readymixPortalDocuments from "../assets/projects/readymix-portal/documents.jpg";
+import readymixPortalJobOrders from "../assets/projects/readymix-portal/job-orders.jpg";
+import readymixPortalCustomer from "../assets/projects/readymix-portal/customer-view.jpg";
+import readymixPortalSignIn from "../assets/projects/readymix-portal/sign-in.jpg";
 import vendorPortalCover from "../assets/projects/vendor-portal/cover.png";
 import aiJobCover from "../assets/projects/ai-job-copilot/cover.webp";
 import momentumCover from "../assets/projects/momentum/cover.png";
@@ -280,7 +285,13 @@ export const moreProjects = [
     description:
       "A secure ASP.NET Core MVC customer portal for Qanbar ReadyMix with role-based access — admins and customer admins upload customer documents, customers log in to see only their own, backed by Azure Blob Storage and Microsoft Graph API.",
     stack: ["ASP.NET Core MVC", "C#", "Azure Blob Storage", "Microsoft Graph API", "MySQL"],
-    image: null,
+    image: readymixPortalDashboard,
+    image2: readymixPortalDocuments,
+    gallery: [
+      { src: readymixPortalSignIn, alt: "Readymix Customer Portal — sign in" },
+      { src: readymixPortalJobOrders, alt: "Readymix Customer Portal — admin job orders" },
+      { src: readymixPortalCustomer, alt: "Readymix Customer Portal — customer view, own documents only" },
+    ],
   },
   {
     id: "contracts-automation",
